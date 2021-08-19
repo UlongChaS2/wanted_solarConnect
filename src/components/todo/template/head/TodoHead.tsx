@@ -4,20 +4,22 @@ import styled from 'styled-components';
 const TodoHead = () => {
   //@TODO 현재 시간을 표시해야합니다.
   const getDate = new Date();
+
   const enDateForm = new Intl.DateTimeFormat('en-US', {
     dateStyle: 'full',
   })
-    .format(getDate)
+    .format()
     .split(',');
+  console.log(getDate);
   const currentDay = enDateForm[0];
   const currentDate = `${enDateForm[1]},${enDateForm[2]}`;
 
   return (
     <TodoHeadBlock>
-      <div>
+      <DateWrap>
         <DayText>{currentDay}</DayText>
         <DateText>{currentDate}</DateText>
-      </div>
+      </DateWrap>
     </TodoHeadBlock>
   );
 };
@@ -30,6 +32,10 @@ const TodoHeadBlock = styled.div`
   padding-top: 52px;
   padding-bottom: 24px;
   border-bottom: 3px solid #33bb77;
+`;
+
+const DateWrap = styled.div`
+  ${({ theme }) => theme.flexSet()};
 `;
 
 const DateText = styled.div`
