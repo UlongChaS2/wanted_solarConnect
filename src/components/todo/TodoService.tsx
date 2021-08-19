@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 export type Itodo = {
   id: number;
@@ -11,7 +11,7 @@ let initialTodos: Itodo[] = [];
 
 export const useTodo = () => {
   const [todoState, setTodoState] = useState(initialTodos);
-  var nextIdState = 0;
+  let nextIdState = 0;
 
   useEffect(() => {
     loadData();
@@ -40,14 +40,14 @@ export const useTodo = () => {
     setTodoState((prevState) =>
       prevState.concat({
         ...todo,
-        id: nextId
+        id: nextId,
       })
     );
   };
 
   const loadData = () => {
-    let data = localStorage.getItem("todos");
-    if (data === undefined) data = "";
+    let data = localStorage.getItem('todos');
+    if (data === undefined) data = '';
     initialTodos = JSON.parse(data!);
     if (initialTodos && initialTodos.length >= 1) {
       incrementNextId();
@@ -56,7 +56,7 @@ export const useTodo = () => {
   };
 
   const saveData = () => {
-    localStorage.setItem("todos", JSON.stringify(todoState));
+    localStorage.setItem('todos', JSON.stringify(todoState));
   };
 
   return {
@@ -65,6 +65,6 @@ export const useTodo = () => {
     incrementNextId,
     toggleTodo,
     removeTodo,
-    createTodo
+    createTodo,
   };
 };

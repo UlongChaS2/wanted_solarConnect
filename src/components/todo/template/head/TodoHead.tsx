@@ -1,5 +1,28 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+
+const TodoHead = () => {
+  //@TODO 현재 시간을 표시해야합니다.
+  const getDate = new Date();
+  const enDateForm = new Intl.DateTimeFormat('en-US', {
+    dateStyle: 'full',
+  })
+    .format(getDate)
+    .split(',');
+  const currentDay = enDateForm[0];
+  const currentDate = `${enDateForm[1]},${enDateForm[2]}`;
+
+  return (
+    <TodoHeadBlock>
+      <div>
+        <DayText>{currentDay}</DayText>
+        <DateText>{currentDate}</DateText>
+      </div>
+    </TodoHeadBlock>
+  );
+};
+
+export default React.memo(TodoHead);
 
 const TodoHeadBlock = styled.div`
   display: flex;
@@ -20,18 +43,3 @@ const DayText = styled.div`
   color: #119955;
   padding-top: 5px;
 `;
-
-const TodoHead = () => {
-  //@TODO 현재 시간을 표시해야합니다.
-  const dayString = "Tuesday";
-  const dateString = "July 20, 2021";
-
-  return (
-    <TodoHeadBlock>
-      <DayText>{dayString}</DayText>
-      <DateText>{dateString}</DateText>
-    </TodoHeadBlock>
-  );
-};
-
-export default React.memo(TodoHead);
