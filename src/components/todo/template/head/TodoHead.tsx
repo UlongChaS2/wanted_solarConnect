@@ -18,7 +18,6 @@ const TodoHead = () => {
     };
   }, []);
 
-  console.log(time);
   return (
     <TodoHeadBlock>
       <DateWrap>

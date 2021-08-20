@@ -26,12 +26,12 @@ export const useTodo = () => {
   };
 
   const toggleTodo = (id: number) => {
-    //@TODO
+    console.log(id);
   };
 
   const removeTodo = (id: number) => {
     setTodoState((prevState) =>
-      prevState.filter((todo: Itodo) => todo.id === id)
+      prevState.filter((todo: Itodo) => todo.id !== id)
     );
   };
 
@@ -45,6 +45,7 @@ export const useTodo = () => {
     );
   };
 
+  console.log(todoState);
   const loadData = () => {
     let data = localStorage.getItem('todos');
     if (data === undefined) data = '';
