@@ -1,16 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ThemeProvider } from 'styled-components';
-import { GlobalStyles } from 'styles/GlobalStyles';
-import mixin from 'styles/mixin';
+import { createGlobalStyle } from 'styled-components';
 import App from './App';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: #eeeeee;
+  }
+`;
 
 ReactDOM.render(
   <>
-    <GlobalStyles />
-    <ThemeProvider theme={mixin}>
-      <App />
-    </ThemeProvider>
+    <GlobalStyle />
+    <App />
   </>,
   document.getElementById('root')
 );
