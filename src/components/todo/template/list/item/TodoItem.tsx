@@ -21,18 +21,18 @@ const TodoItem = ({ toggleTodo, removeTodo, todo }: TodoItemProps) => {
     toggleTodo(id);
   };
 
-  const handleRemove = (id: number) => {
-    showDeleteConfirm(id);
+  const handleRemove = (id: number, todo: Itodo) => {
+    showDeleteConfirm(id, todo);
   };
 
-  function showDeleteConfirm(id: number) {
+  function showDeleteConfirm(id: number, todo: Itodo) {
     confirm({
-      title: 'Are you sure delete this task?',
+      title: '선택하신 계획을 지우겠습니까❓',
       icon: <ExclamationCircleOutlined />,
-      content: 'Some descriptions',
-      okText: 'Yes',
+      content: `${todo.text} ${todo.dueDate && `dueDate ${todo.dueDate}`}`,
+      okText: '확인',
       okType: 'danger',
-      cancelText: 'No',
+      cancelText: '취소',
       onOk() {
         removeTodo(id);
       },
@@ -51,7 +51,7 @@ const TodoItem = ({ toggleTodo, removeTodo, todo }: TodoItemProps) => {
         {todo.text}
       </Text>
       <Date>{todo.dueDate}</Date>
-      <Remove onClick={() => handleRemove(todo.id)}>
+      <Remove onClick={() => handleRemove(todo.id, todo)}>
         <DeleteOutlined />
       </Remove>
     </TodoItemBlock>
