@@ -9,8 +9,8 @@
 ## 📌 프젝젝트 소개
 
 <p>
-<img src="https://img.shields.io/github/languages/top/six-sense/4_solaConnect_team2?color=yellow&logo=Javascript"> </img>
-<img src="https://img.shields.io/github/repo-size/six-sense/4_solaConnect_team2?color=%23&logo=Github"> </img>
+<img src="https://img.shields.io/github/languages/top/UlongChaS2/wanted_solarConnect?color=yellow&logo=Javascript"> </img>
+<img src="https://img.shields.io/github/repo-size/UlongChaS2/wanted_solarConnect?color=%23&logo=Github"> </img>
 
 </p>
 
