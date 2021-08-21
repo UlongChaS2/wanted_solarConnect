@@ -29,7 +29,9 @@ const TodoItem = ({ toggleTodo, removeTodo, todo }: TodoItemProps) => {
     confirm({
       title: '선택하신 계획을 지우겠습니까❓',
       icon: <ExclamationCircleOutlined />,
-      content: `${todo.text} ${todo.dueDate && `dueDate ${todo.dueDate}`}`,
+      content: `📝 ${todo.text}  ${
+        todo.dueDate && `<🗓 dueDate : ${todo.dueDate}> `
+      }`,
       okText: '확인',
       okType: 'danger',
       cancelText: '취소',
@@ -73,7 +75,10 @@ const TodoItemBlock = styled.div`
   align-items: center;
   padding-top: 12px;
   padding-bottom: 12px;
+  padding: 20px 30px;
   &:hover {
+    background: #eee;
+
     ${Remove} {
       display: initial;
     }

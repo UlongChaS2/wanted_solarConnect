@@ -16,7 +16,7 @@ const TodoCreate = ({
   incrementNextId,
 }: TodoCreateProps) => {
   const [value, setValue] = useState('');
-  const [dueDateArr, setDueDateArr] = useState('');
+  const [dueDateStr, setDueDateStr] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setValue(e.target.value);
@@ -29,7 +29,7 @@ const TodoCreate = ({
         id: nextId,
         text: value,
         done: false,
-        dueDate: dueDateArr,
+        dueDate: dueDateStr,
       });
       incrementNextId(); // nextId 하나 증가
 
@@ -44,9 +44,9 @@ const TodoCreate = ({
   };
 
   function selectDueDate(value: any, dateString: string) {
-    setDueDateArr(dateString);
+    setDueDateStr(dateString);
+    return dueDateStr;
   }
-
   return (
     <>
       <InsertFormPositioner>
