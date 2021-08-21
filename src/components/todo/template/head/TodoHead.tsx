@@ -5,18 +5,18 @@ import styled from 'styled-components';
 const TodoHead = () => {
   const [time, setTime] = useState<string>('');
 
-  const getCurrentTime = () => {
-    const todayDate = new Date();
-    const currentTime = todayDate.toLocaleTimeString('en-US');
-    setTime(currentTime);
-  };
-
   useEffect(() => {
     setInterval(getCurrentTime, 1000);
     return () => {
       setInterval(getCurrentTime, 1000);
     };
   }, []);
+
+  const getCurrentTime = () => {
+    const todayDate = new Date();
+    const currentTime = todayDate.toLocaleTimeString('en-US');
+    setTime(currentTime);
+  };
 
   return (
     <TodoHeadBlock>
