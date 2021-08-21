@@ -4,7 +4,7 @@
     <img src='https://www.solarconnect.kr/assets/img/common/sc-logo.svg' width="300px;" alt="LiveMD" />
   </a>
 </p>
-<h2 align='middle'><a href='solarconnect-todolist-yj.netlify.app'>solarconnect.netlify.app</a></h2>
+<h2 align='middle'><a href='https://solarconnect-todolist-yj.netlify.app/'>solarconnect.netlify.app</a></h2>
 
 ## 📌 프젝젝트 소개
 
