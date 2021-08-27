@@ -6,7 +6,7 @@
 </p>
 <h2 align='middle'><a href='https://solarconnect-todolist-yj.netlify.app/'>solarconnect.netlify.app</a></h2>
 
-## 📌 프젝젝트 소개
+## 📌 프로젝트 소개
 
 <p>
 <img src="https://img.shields.io/github/languages/top/UlongChaS2/wanted_solarConnect?color=yellow&logo=Javascript"> </img>
@@ -16,8 +16,7 @@
 
 ### 📋 프리온보딩 코스 솔라커넥트 기업과제
 
-> To do List 프로젝트 TypeScript로 마무리 짓기
-
+> To do List 프로젝트 TypeScript로 기능 완성 
 <br/>
 
 <details>
